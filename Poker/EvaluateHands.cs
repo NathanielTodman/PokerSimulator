@@ -98,8 +98,6 @@ namespace Poker
                 return Hand.OnePair;
 
             //if the hand is nothing, than the player with highest card wins
-
-                   
             
             return Hand.HighCard;
 
@@ -130,25 +128,21 @@ namespace Poker
             if (cards[3].myValue == cards[4].myValue && cards[3].myValue == cards[5].myValue && cards[3].myValue == cards[6].myValue)
             {
                 handValue.Total = (int)cards[1].myValue * 4;
-                //handValue.HighCard = (int)cards[2].myValue;
                 return true;
             }
             else if (cards[2].myValue == cards[3].myValue && cards[2].myValue == cards[4].myValue && cards[2].myValue == cards[5].myValue)
             {
                 handValue.Total = (int)cards[2].myValue * 4;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[1].myValue == cards[2].myValue && cards[1].myValue == cards[3].myValue && cards[1].myValue == cards[4].myValue)
             {
                 handValue.Total = (int)cards[1].myValue * 4;
-                //handValue.HighCard = (int)cards[5].myValue;
                 return true;
             }
             else if (cards[0].myValue == cards[1].myValue && cards[0].myValue == cards[2].myValue && cards[0].myValue == cards[3].myValue)
             {
                 handValue.Total = (int)cards[0].myValue * 4;
-                //handValue.HighCard = (int)cards[4].myValue;
                 return true;
             }
 
@@ -242,32 +236,27 @@ namespace Poker
             if (cards[4].myValue == cards[5].myValue && cards[4].myValue == cards[6].myValue)
             {
                 handValue.Total = (int)cards[6].myValue * 3;
-                //handValue.HighCard = (int)cards[3].myValue;
                 return true;
             }
             else if (cards[3].myValue == cards[4].myValue && cards[3].myValue == cards[5].myValue)
             {
                 handValue.Total = (int)cards[5].myValue * 3;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
 
             else if (cards[2].myValue == cards[3].myValue && cards[2].myValue == cards[4].myValue)
             {
                 handValue.Total = (int)cards[4].myValue * 3;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[1].myValue == cards[2].myValue && cards[1].myValue == cards[3].myValue)
             {
                 handValue.Total = (int)cards[3].myValue * 3;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[0].myValue == cards[1].myValue && cards[0].myValue == cards[2].myValue)
             {
                 handValue.Total = (int)cards[2].myValue * 3;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
 
@@ -280,64 +269,54 @@ namespace Poker
             if (cards[6].myValue == cards[5].myValue && cards[4].myValue == cards[3].myValue)
             {
                 handValue.Total = ((int)cards[4].myValue * 2) + ((int)cards[6].myValue * 2);
-                //handValue.HighCard = (int)cards[2].myValue;
                 return true;
             }
             else if (cards[6].myValue == cards[5].myValue && cards[3].myValue == cards[2].myValue)
             {
                 handValue.Total = ((int)cards[3].myValue * 2) + ((int)cards[6].myValue * 2);
-                //handValue.HighCard = (int)cards[4].myValue;
                 return true;
             }
             else if (cards[6].myValue == cards[5].myValue && cards[2].myValue == cards[1].myValue)
             {
                 handValue.Total = ((int)cards[2].myValue * 2) + ((int)cards[6].myValue * 2);
-                //handValue.HighCard = (int)cards[4].myValue;
                 return true;
             }
             else if (cards[6].myValue == cards[5].myValue && cards[1].myValue == cards[0].myValue)
             {
                 handValue.Total = ((int)cards[1].myValue * 2) + ((int)cards[6].myValue * 2);
-                //handValue.HighCard = (int)cards[4].myValue;
                 return true;
             }
             //[5]+[4] first pair and check for second pair
             else if (cards[5].myValue == cards[4].myValue && cards[3].myValue == cards[2].myValue)
             {
                 handValue.Total = ((int)cards[3].myValue * 2) + ((int)cards[5].myValue * 2);
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[5].myValue == cards[4].myValue && cards[2].myValue == cards[1].myValue)
             {
                 handValue.Total = ((int)cards[2].myValue * 2) + ((int)cards[5].myValue * 2);
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[5].myValue == cards[4].myValue && cards[1].myValue == cards[0].myValue)
             {
                 handValue.Total = ((int)cards[1].myValue * 2) + ((int)cards[5].myValue * 2);
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             //[4]+[3] pair check for second pair
             else if (cards[4].myValue == cards[3].myValue && cards[2].myValue == cards[1].myValue)
             {
                 handValue.Total = ((int)cards[2].myValue * 2) + ((int)cards[4].myValue * 2);
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[4].myValue == cards[3].myValue && cards[1].myValue == cards[0].myValue)
             {
                 handValue.Total = ((int)cards[1].myValue * 2) + ((int)cards[4].myValue * 2);
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             //[3]+[2] pair check for second pair
             else if (cards[3].myValue == cards[2].myValue && cards[1].myValue == cards[0].myValue)
             {
                 handValue.Total = ((int)cards[1].myValue * 2) + ((int)cards[3].myValue * 2);
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             return false;
@@ -352,37 +331,31 @@ namespace Poker
             if (cards[6].myValue == cards[5].myValue)
             {
                 handValue.Total = (int)cards[6].myValue * 2;
-                //handValue.HighCard = (int)cards[4].myValue;
                 return true;
             }
             else if (cards[5].myValue == cards[4].myValue)
             {
                 handValue.Total = (int)cards[5].myValue * 2;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[4].myValue == cards[3].myValue)
             {
                 handValue.Total = (int)cards[4].myValue * 2;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[3].myValue == cards[2].myValue)
             {
                 handValue.Total = (int)cards[3].myValue * 2;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[2].myValue == cards[1].myValue)
             {
                 handValue.Total = (int)cards[2].myValue * 2;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             else if (cards[1].myValue == cards[0].myValue)
             {
                 handValue.Total = (int)cards[1].myValue * 2;
-                //handValue.HighCard = (int)cards[6].myValue;
                 return true;
             }
             return false;
